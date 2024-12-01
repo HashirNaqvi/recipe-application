@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const { searchRecipes } = require("../controller/recipeController");
 
-router.get("/", (req, res) => {
-  res.json({ message: "hello" });
-});
+// Route for searching recipes based on ingredients
+router.get("/search", searchRecipes);
 
 module.exports = router;
